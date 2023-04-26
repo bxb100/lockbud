@@ -128,7 +128,7 @@ $ cd YourProject; cargo clean; cargo lockbud -k deadlock -b -l cc,tokio_util,ind
 
 ### Using by docker
 
-Current available docker image is `burtonqin/lockbud:latest`, [link](https://hub.docker.com/r/burtonqin/lockbud)
+Current available docker image is `burtonqin/lockbud`[^1]
 
 ```shell
 docker run --rm -it -v ./toys/inter/:/volume burtonqin/lockbud -k deadlock
@@ -136,7 +136,7 @@ docker run --rm -it -v ./toys/inter/:/volume burtonqin/lockbud -k deadlock
 
 lockbud will execute `cargo clean && cargo lockbud -k deadlock` in `/volume` directory.
 
-> **Note**
+> **Note**  
 > It will compile your project in docker, so you need manual remove the target directory before your ready for working.
 
 ### Using in CI
@@ -161,7 +161,7 @@ jobs:
           cargo lockbud -k deadlock
 ```
 
-> **Note**
+> **Note**  
 > Currently lockbud output in stdout
 
 ## How it works
@@ -213,3 +213,5 @@ Bugs detected and fixed (one PR may fix multiple bugs):
 
 ## License
 The lockbud Project is licensed under BSD-3.
+
+[^1]: https://hub.docker.com/r/burtonqin/lockbud
